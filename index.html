@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORE-MATH
+
+    </title>
+    <style>
+        body {
+            background-color: #09203F;
+        }
+
+        #plus,
+        #into,
+        #bag,
+        #minus {
+            font-weight: bold;
+        }
+
+        #p {
+            color: #436681;
+        }
+
+        .div {
+            border: 1px solid #09203F;
+            animation: sliding 8s ease-in-out 0.5s infinite alternate;
+            padding: 40px 20px;
+            width: 75%;
+            margin-bottom: 30px;
+
+        }
+
+
+        .div-perent {
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        .margin {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* .containe {
+            display: flex;
+            justify-content: center;
+        } */
+        .p {
+            display: flex;
+            justify-content: center;
+            margin-top: 125px;
+
+        }
+
+        input {
+            background-color: #09203F;
+            border: none;
+            width: 176px;
+
+        }
+
+        button {
+            background: linear-gradient(#09203F, #537895);
+            border: none;
+            padding: 5px 9px;
+
+        }
+
+        section {
+            border: 1px solid;
+            border: none;
+            width: 15%;
+            padding: 50px 80px;
+            border-radius: 10px;
+            background: linear-gradient(#09203F, #537895);
+
+        }
+
+        #p {
+            color: #436681;
+        }
+
+        @media screen and (max-width:700px) {
+            .p {
+                min-width: 280px;
+
+            }
+
+            input {
+                width: 96%;
+
+
+
+
+            }
+
+            section {
+                border: 1px solid;
+                border: none;
+                width: 20%;
+                padding: 50px 80px;
+                border-radius: 10px;
+                background: linear-gradient(#09203F, #537895);
+
+            }
+
+            nav {
+                padding-left: 250px;
+                display: none;
+            }
+        }
+
+
+        @keyframes sliding {
+            0% {
+                border: 1px solid #09203F;
+            }
+
+            25% {
+                border: 1px solid #537895;
+
+            }
+
+            50% {
+                border: 1px solid #09203F;
+
+            }
+
+            75% {
+                border: 1px solid #537895;
+
+            }
+
+            100% {
+                border: 1px solid #09203F;
+            }
+
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+
+            padding: 0;
+
+        }
+
+        .dropdown li {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            list-style: none;
+            /* margin-right: 20px; */
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: #537895;
+            font-size: 20px;
+            padding: 0 10px;
+        }
+
+        nav>ul {
+            display: flex;
+        }
+
+        nav li:hover {
+            /* background-color: #09203F; */
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            /* background-color: #436681; */
+            padding: 0;
+
+        }
+
+        nav>ul>li:hover>ul {
+            display: block;
+        }
+
+        .dropdown li {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            padding-left: 211px;
+        }
+
+        h1 {
+            font-weight: bold;
+            border: 1px solid;
+            padding: 2px 6px;
+            border-radius: 50%;
+
+        }
+
+        span {}
+    </style>
+</head>
+
+<body>
+
+
+    <div class="p">
+
+        <section>
+            <nav>
+                <ul>
+                    <li>
+                        <h1><span>...</span></h1>
+                        <ul class="dropdown">
+
+                            <li><a href="joy.html">Use</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="div-perent">
+
+                <div>
+                    <div id="div" class="div">
+
+                    </div>
+                    <div class="input">
+                        <input type="number" name="" id="1">
+                        <br>
+                        <br>
+                        <br>
+                        <input type="number" name="" id="2">
+                    </div>
+                    <br>
+                    <br>
+
+
+
+                    <span class="margin">
+                        <button id="plus">+</button>
+                        <button id="minus">-</button>
+                        <button id="into">x</button>
+                        <button id="bag">/</button>
+                    </span>
+                    <p id="p">Clear</p>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script>
+
+
+
+
+
+        document.getElementById('p').addEventListener('click', function () {
+
+
+            const div = document.getElementById('div')
+            const inner = div.innerText
+            div.innerText = ''
+
+            const oneInput = document.getElementById('1')
+            const value = oneInput.value
+
+            oneInput.value = ''
+
+            const twoInput = document.getElementById('2')
+            const valuee = twoInput.value
+            twoInput.value = ''
+            const peragraph = document.getElementById('p')
+            peragraph.style.color = '#436681'
+
+
+
+
+        })
+        document.getElementById('1').addEventListener('focus', function () {
+            const oneInput = document.getElementById('1')
+            oneInput.style.color = 'bisque'
+
+
+        })
+        document.getElementById('2').addEventListener('focus', function () {
+            const oneInput = document.getElementById('2')
+            oneInput.style.color = 'bisque'
+
+
+        })
+
+        document.getElementById('plus').addEventListener('click', function () {
+            const oneInput = document.getElementById('1')
+            const value = oneInput.value
+            const parsflot = parseFloat(value)
+
+            const twoInput = document.getElementById('2')
+            const valuee = twoInput.value
+            const parsflott = parseFloat(valuee)
+
+            const add = parsflot + parsflott
+
+            const div = document.getElementById('div')
+            const inner = div.innerText
+            div.innerText = add
+            div.style.color = 'bisque'
+
+            div.style.right = '40px'
+
+
+            const joy = ''
+            if (oneInput.value === joy) {
+                alert('bodai choda polapain number de naile lewra da bair korum kemne....')
+
+
+            }
+            else if (twoInput.value === joy) {
+                alert('Plese type input')
+            }
+
+            const peragraph = document.getElementById('p')
+            peragraph.style.color = 'black'
+            peragraph.style.fontWeight = ''
+        })
+        document.getElementById('minus').addEventListener('click', function () {
+            const oneInput = document.getElementById('1')
+            const value = oneInput.value
+            const parsflot = parseFloat(value)
+
+            const twoInput = document.getElementById('2')
+            const valuee = twoInput.value
+            const parsflott = parseFloat(valuee)
+
+            const add = parsflot - parsflott
+
+            const div = document.getElementById('div')
+            const inner = div.innerText
+            div.innerText = add
+            div.style.color = 'bisque'
+
+            const joy = ''
+            if (oneInput.value === joy) {
+                alert('bodai choda polapain number de naile lewra da bair korum kemne....')
+
+
+            }
+            else if (twoInput.value === joy) {
+                alert('Plese type input')
+
+            }
+
+
+            const peragraph = document.getElementById('p')
+            peragraph.style.color = 'black'
+        })
+        document.getElementById('into').addEventListener('click', function () {
+            const oneInput = document.getElementById('1')
+            const value = oneInput.value
+            const parsflot = parseFloat(value)
+
+            const twoInput = document.getElementById('2')
+            const valuee = twoInput.value
+            const parsflott = parseFloat(valuee)
+
+            const add = parsflot * parsflott
+
+            const div = document.getElementById('div')
+            const inner = div.innerText
+            div.innerText = add
+            div.style.color = 'bisque'
+            const joy = ''
+            if (oneInput.value === joy) {
+                alert('bodai choda polapain number de naile lewra da bair korum kemne....')
+
+
+            }
+            else if (twoInput.value === joy) {
+                alert('Plese type input')
+            }
+
+            const peragraph = document.getElementById('p')
+            peragraph.style.color = 'black'
+        })
+        document.getElementById('bag').addEventListener('click', function () {
+            const oneInput = document.getElementById('1')
+            const value = oneInput.value
+            const parsflot = parseFloat(value)
+
+            const twoInput = document.getElementById('2')
+            const valuee = twoInput.value
+            const parsflott = parseFloat(valuee)
+
+            const add = parsflot / parsflott
+
+            const div = document.getElementById('div')
+            const inner = div.innerText
+            div.innerText = add
+            div.style.color = 'bisque'
+            const joy = ''
+            if (oneInput.value === joy) {
+                alert('bodai choda polapain number de naile lewra da bair korum kemne....')
+
+
+            }
+            else if (twoInput.value === joy) {
+                alert('Plese type input')
+            }
+
+            const peragraph = document.getElementById('p')
+            peragraph.style.color = 'black'
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math-use</title>
+    <style>
+        body {
+            background-color: #09203F;
+        }
+
+        #p {
+            color: #436681;
+        }
+
+        section {
+            border: 1px solid;
+            border: none;
+            width: 15%;
+            padding-left: 60px;
+            padding-right: 70px;
+            padding-bottom: 305px;
+
+            border-radius: 10px;
+            background: linear-gradient(#09203F, #537895);
+
+        }
+
+        .p {
+            display: flex;
+            justify-content: center;
+            margin-top: 125px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div onclick="typeWriter(), ojox(),creatbtn() " class="p" id="p">
+        <section id="">
+            <div id="o">
+
+            </div>
+
+            <p id="btn"></p>
+        </section>
+
+
+    </div>
+
+
+    <script>
+        var i = 0;
+        var txt = '  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam quasi laboriosam fuga, a magni quo eos delectus, odio aliquid quae nesciunt tenetur corrupti labore? Consectetur sequi dicta sunt ullam esse nostrum voluptate, culpa tenetur magnam nisi saepe ipsum consequuntur quam quis dolorum dolor vero beatae! Unde aperiam quam accusantium laboriosam.';
+        var speed = 50;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("o").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        document.getElementById('o')
+
+
+        function ojox() {
+            const joy = document.getElementById('o')
+            const inner = joy.innerText;
+            joy.style.textAlign = 'justify'
+
+
+        }
+
+        function creatbtn() {
+            if (txt.length === 358) {
+                const btn = document.getElementById('btn')
+                const innerhtml = btn.innerHTML = 'click'
+            }
+        }
+
+    </script>
+</body>
+
+</html>

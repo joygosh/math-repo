@@ -1,0 +1,2 @@
+var txt = '  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam quasi laboriosam fuga, a magni quo eos delectus, odio aliquid quae nesciunt tenetur corrupti labore? Consectetur sequi dicta sunt ullam esse nostrum voluptate, culpa tenetur magnam nisi saepe ipsum consequuntur quam quis dolorum dolor vero beatae! Unde aperiam quam accusantium laboriosam.';
+console.log(txt.length)
